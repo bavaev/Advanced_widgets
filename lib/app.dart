@@ -170,8 +170,7 @@ class WeatherPageState extends State<WeatherPage> with SingleTickerProviderState
           theme ? _changeTheme(context, MyThemeKeys.dark) : _changeTheme(context, MyThemeKeys.light);
           theme = !theme;
         },
-        child: const Icon(Icons.nights_stay_outlined),
-        // child: const Icon(Icons.wb_sunny_outlined),
+        child: theme ? const Icon(Icons.nights_stay_outlined) : const Icon(Icons.wb_sunny_outlined),
       ),
     );
   }
